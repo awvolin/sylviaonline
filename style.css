@@ -1,20 +1,38 @@
-.container {
-    overflow: hidden;
-  }
-  
-  .sliding-background {
-    background: url("https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190710102234/download3.png") repeat-x;
-    height: 560px;
-    width: 5076px;
-    animation: slide 10s linear infinite;
-  }
-  
-  @keyframes slide {
-    0% {
-      transform: translate3d(0, 0, 0);
-    }
-    100% {
-      transform: translate3d(-1692px, 0, 0);
-    }
-  }
-  
+body {
+    background-color: #d3b88f;
+}
+h1 {
+    text-align: center;
+    font-family: "Satisfy", cursive;
+    font-size: 78px;
+    margin-bottom: -4px;
+}
+h2 {
+    text-align: center;
+    font-family: "Oxygen", sans-serif;
+    font-style: italic;
+    font-size: 24px;
+}
+/* Container for images */
+.image-container {
+    max-width: 100%; /* Set maximum width to 100% of the viewport */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px; /* Add padding as needed */
+    display: flex; /* Display images horizontally */
+    flex-wrap: wrap; /* Allow images to wrap to the next line if needed */
+    justify-content: space-between; /* Distribute space between images */
+}
+
+/* Styling for images */
+.image-container img {
+    width: 200px; /* Set a fixed width for uniformity */
+    height: 200px; /* Set a fixed height for uniformity */
+    padding: 20px;
+    object-fit: cover; /* Crop the images to fit the container */
+    transition: transform 0.5s ease; /* Add smooth transition effect for transform */
+}
+
+/* Expand images on hover */
+.image-container img:hover {
+    transform: scale(1.1); /* Scale up the image to reveal the full image */
+}
